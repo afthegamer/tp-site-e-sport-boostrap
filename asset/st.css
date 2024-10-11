@@ -1,0 +1,87 @@
+/* styles.css */
+
+/* Header adjustments for PC */
+header {
+    background: url('./banière-esport-squeezy.webp') no-repeat center center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+header .container {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.25rem;
+}
+
+/* Navbar logo */
+.navbar-brand img {
+    width: 50px;
+    height: auto;
+}
+
+/* Carousel adjustments for PC */
+.carousel-item {
+    transition: transform 3s ease-in-out;
+}
+
+.carousel-inner {
+    display: flex;
+    justify-content: center;
+}
+
+/* Card responsiveness */
+.card-img-top {
+    height: auto;
+    object-fit: cover;
+}
+
+.card {
+    margin: 0.5rem;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+    .carousel-inner .card {
+        flex: 0 0 48%; /* Deux items visibles simultanément sur tablette */
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        height: 50vh; /* Réduit la hauteur du header sur mobile */
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .card {
+        margin-bottom: 1.5rem;
+    }
+
+    .carousel-inner .card {
+        flex: 0 0 100%; /* Un seul item visible à la fois sur mobile */
+    }
+}
